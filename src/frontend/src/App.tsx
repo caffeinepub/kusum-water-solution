@@ -264,6 +264,29 @@ const WATER_PURIFIERS: Product[] = [
       Power: "950W",
     },
   },
+  {
+    name: "Vessel Water Purifier",
+    price: "₹8,500",
+    mrp: "₹12,000",
+    image:
+      "/assets/vessels-removebg-preview-019d430f-fcd5-7340-a51d-2dc78fddc544.png",
+    description:
+      "Vessel Water Purifiers use high-quality FRP (Fiber Reinforced Plastic) pressure vessels for industrial and commercial water treatment. Designed for durability and high-flow filtration applications.",
+    features: [
+      "High-quality FRP pressure vessel construction",
+      "Corrosion-resistant and durable design",
+      "Suitable for industrial and commercial use",
+      "Available in multiple sizes and capacities",
+      "Easy installation and maintenance",
+    ],
+    specs: {
+      Material: "FRP (Fiber Reinforced Plastic)",
+      Capacity: "Multiple sizes available",
+      Application: "Industrial / Commercial",
+      "Working Pressure": "150 PSI",
+      Warranty: "3 Years",
+    },
+  },
 ];
 
 const CHIMNEYS: Product[] = [
