@@ -18,7 +18,6 @@ import {
   Tag,
   Wrench,
   X,
-  Youtube,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -719,7 +718,7 @@ export default function App() {
         </div>
         <div className="flex items-center gap-3">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=100067564736198"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -729,7 +728,7 @@ export default function App() {
             <Facebook size={14} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/kusumwatersolution/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -739,14 +738,23 @@ export default function App() {
             <Instagram size={14} />
           </a>
           <a
-            href="https://youtube.com"
+            href="https://www.tiktok.com/@kusumwatersolutionpvtltd"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="YouTube"
+            aria-label="TikTok"
             className="hover:text-red-300 transition-colors"
             data-ocid="social.youtube.link"
           >
-            <Youtube size={14} />
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              role="img"
+              aria-label="TikTok"
+            >
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.99a8.17 8.17 0 0 0 4.78 1.52V7.07a4.85 4.85 0 0 1-1.01-.38z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -925,7 +933,7 @@ export default function App() {
                     transition={{ duration: 0.7 }}
                   >
                     <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-sm font-medium border border-white/30 bg-white/10 backdrop-blur-sm">
-                      Trusted since 2014 • Serving across India
+                      Serving across Nepal
                     </span>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-5">
                       Your Trusted Home
@@ -983,10 +991,10 @@ export default function App() {
                     </h2>
                     <p className="text-gray-500 max-w-xl mx-auto">
                       Explore our range of premium home appliances designed for
-                      Indian households and businesses.
+                      Nepali households and businesses.
                     </p>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {CATEGORIES.map((cat, i) => (
                       <motion.div
                         key={cat.title}
@@ -1196,7 +1204,7 @@ export default function App() {
                       Founded in 2014, Kusum Water Solution Pvt. Ltd. is a
                       leading supplier and installer of solar water heaters,
                       advanced water purification systems, and kitchen chimneys
-                      across India. We are committed to bringing
+                      across Nepal. We are committed to bringing
                       energy-efficient, eco-friendly home solutions that improve
                       everyday quality of life.
                     </p>
@@ -1204,14 +1212,14 @@ export default function App() {
                       Our team of certified technicians provides end-to-end
                       service — from product selection and installation to
                       annual maintenance contracts (AMC). We work with top
-                      brands and deliver only ISI-certified, BEE-rated products
+                      brands and deliver only IS0-certified, BEE-rated products
                       backed by manufacturer warranties and our own after-sales
                       support.
                     </p>
                     <div className="grid grid-cols-3 gap-4">
                       {[
                         { stat: "500+", label: "Happy Customers" },
-                        { stat: "10+", label: "Years Experience" },
+                        { stat: "7+", label: "Years Experience" },
                         { stat: "3", label: "Product Categories" },
                       ].map((item) => (
                         <div
@@ -1299,7 +1307,7 @@ export default function App() {
                       to help you find the right solution.
                     </p>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Company Info */}
                     <div className="text-blue-100">
                       <div className="flex items-center gap-2 mb-6">
@@ -1358,7 +1366,7 @@ export default function App() {
                       </div>
                       <div className="flex gap-3 mt-8">
                         <a
-                          href="https://facebook.com"
+                          href="https://www.facebook.com/profile.php?id=100067564736198"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Facebook"
@@ -1368,7 +1376,7 @@ export default function App() {
                           <Facebook size={15} className="text-blue-200" />
                         </a>
                         <a
-                          href="https://instagram.com"
+                          href="https://www.instagram.com/kusumwatersolution/?hl=en"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Instagram"
@@ -1378,14 +1386,24 @@ export default function App() {
                           <Instagram size={15} className="text-blue-200" />
                         </a>
                         <a
-                          href="https://youtube.com"
+                          href="https://www.tiktok.com/@kusumwatersolutionpvtltd"
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label="YouTube"
+                          aria-label="TikTok"
                           className="w-9 h-9 rounded-full flex items-center justify-center border border-blue-700 hover:bg-blue-700 transition-colors"
                           data-ocid="contact.youtube.link"
                         >
-                          <Youtube size={15} className="text-blue-200" />
+                          <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="text-blue-200"
+                            role="img"
+                            aria-label="TikTok"
+                          >
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.99a8.17 8.17 0 0 0 4.78 1.52V7.07a4.85 4.85 0 0 1-1.01-.38z" />
+                          </svg>
                         </a>
                       </div>
                     </div>
@@ -1457,21 +1475,6 @@ export default function App() {
                           {submitting ? "Sending..." : "Send Message"}
                         </Button>
                       </form>
-                    </div>
-
-                    {/* Map */}
-                    <div className="rounded-[12px] overflow-hidden shadow-xl min-h-[300px]">
-                      <iframe
-                        title="Kusum Water Solution Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112075.22773929116!2d77.06971539726565!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                        width="100%"
-                        height="100%"
-                        className="min-h-[300px]"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      />
                     </div>
                   </div>
                 </div>
