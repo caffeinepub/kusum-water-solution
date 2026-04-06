@@ -29,6 +29,7 @@ const NAV_LINKS = [
   { label: "Solar Heater", href: "#solar-heater" },
   { label: "Water Purifier", href: "#water-purifier" },
   { label: "Kitchen Chimney", href: "#kitchen-chimney" },
+  { label: "Vessel Purifier", href: "#vessel-purifier" },
   { label: "About Us", href: "#about" },
   { label: "Contact Us", href: "#contact" },
 ];
@@ -56,6 +57,14 @@ const CATEGORIES = [
     image:
       "/assets/livpurechimney-removebg-preview-019d42ee-f48f-75b8-bc2d-58b7732c8984.png",
     href: "#kitchen-chimney",
+  },
+  {
+    title: "Vessel Water Purifier",
+    description:
+      "Industrial-grade FRP pressure vessel purifiers for commercial and large-scale water treatment.",
+    image:
+      "/assets/vessels-removebg-preview-019d430f-fcd5-7340-a51d-2dc78fddc544.png",
+    href: "#vessel-purifier",
   },
 ];
 
@@ -264,24 +273,49 @@ const WATER_PURIFIERS: Product[] = [
       Power: "950W",
     },
   },
+];
+
+const VESSEL_PURIFIERS: Product[] = [
   {
-    name: "Vessel Water Purifier",
-    price: "₹8,500",
-    mrp: "₹12,000",
+    name: "Neo Vessel Water Purifier",
+    price: "",
+    mrp: "",
     image:
-      "/assets/vessels-removebg-preview-019d430f-fcd5-7340-a51d-2dc78fddc544.png",
+      "/assets/screenshot_2026-03-31_152801-removebg-preview-019d4349-0a43-7107-af07-a68acc0c4d16.png",
     description:
-      "Vessel Water Purifiers use high-quality FRP (Fiber Reinforced Plastic) pressure vessels for industrial and commercial water treatment. Designed for durability and high-flow filtration applications.",
+      "Neo Vessel Water Purifier is a reliable FRP pressure vessel system designed for efficient water filtration. Compact yet powerful, it is ideal for homes and small commercial setups requiring clean, safe water.",
     features: [
-      "High-quality FRP pressure vessel construction",
-      "Corrosion-resistant and durable design",
-      "Suitable for industrial and commercial use",
-      "Available in multiple sizes and capacities",
-      "Easy installation and maintenance",
+      "High-quality FRP pressure vessel",
+      "Compact and space-saving design",
+      "Suitable for home and small commercial use",
+      "Easy to install and maintain",
+      "Long-lasting and corrosion-resistant",
     ],
     specs: {
       Material: "FRP (Fiber Reinforced Plastic)",
-      Capacity: "Multiple sizes available",
+      Application: "Home / Small Commercial",
+      "Working Pressure": "150 PSI",
+      Warranty: "2 Years",
+    },
+  },
+  {
+    name: "Osmo Vessel Water Purifier",
+    price: "",
+    mrp: "",
+    image:
+      "/assets/osmo_vessel-removebg-preview-019d4349-091c-713f-9a53-1ced27c393e5.png",
+    description:
+      "Osmo Vessel Water Purifier features a dual-tank FRP system built for heavy-duty industrial and commercial water treatment. Engineered for high-flow performance and long-term durability in demanding environments.",
+    features: [
+      "Dual-tank high-capacity FRP vessels",
+      "Built for industrial and commercial use",
+      "High-flow rate filtration system",
+      "Corrosion-resistant and durable construction",
+      "Reliable performance under high pressure",
+    ],
+    specs: {
+      Material: "FRP (Fiber Reinforced Plastic)",
+      Configuration: "Dual Tank",
       Application: "Industrial / Commercial",
       "Working Pressure": "150 PSI",
       Warranty: "3 Years",
@@ -434,13 +468,17 @@ function ProductCard({
           {name}
         </h4>
         <div className="mt-auto pt-2 flex items-center gap-2">
-          <span
-            className="font-bold text-base"
-            style={{ color: "oklch(0.46 0.095 222)" }}
-          >
-            {price}
-          </span>
-          <span className="text-sm text-gray-400 line-through">{mrp}</span>
+          {price && (
+            <span
+              className="font-bold text-base"
+              style={{ color: "oklch(0.46 0.095 222)" }}
+            >
+              {price}
+            </span>
+          )}
+          {mrp && (
+            <span className="text-sm text-gray-400 line-through">{mrp}</span>
+          )}
         </div>
         <Button
           size="sm"
@@ -520,17 +558,23 @@ function ProductDetail({
           >
             {product.name}
           </h1>
-          <div className="flex items-center gap-3">
-            <span
-              className="text-2xl font-bold"
-              style={{ color: "oklch(0.46 0.095 222)" }}
-            >
-              {product.price}
-            </span>
-            <span className="text-lg text-gray-400 line-through">
-              {product.mrp}
-            </span>
-          </div>
+          {(product.price || product.mrp) && (
+            <div className="flex items-center gap-3">
+              {product.price && (
+                <span
+                  className="text-2xl font-bold"
+                  style={{ color: "oklch(0.46 0.095 222)" }}
+                >
+                  {product.price}
+                </span>
+              )}
+              {product.mrp && (
+                <span className="text-lg text-gray-400 line-through">
+                  {product.mrp}
+                </span>
+              )}
+            </div>
+          )}
           <p className="text-gray-600 leading-relaxed text-sm">
             {product.description}
           </p>
@@ -661,16 +705,16 @@ export default function App() {
       >
         <div className="flex items-center gap-5">
           <a
-            href="tel:+919876543210"
+            href="tel:9843502183"
             className="flex items-center gap-1.5 hover:text-blue-200 transition-colors"
           >
-            <Phone size={12} /> +91 98765 43210
+            <Phone size={12} /> 9843502183/9851174115
           </a>
           <a
-            href="mailto:info@kusumwatersolution.com"
+            href="mailto:kusumwatersolution77@gmail.com"
             className="flex items-center gap-1.5 hover:text-blue-200 transition-colors"
           >
-            <Mail size={12} /> info@kusumwatersolution.com
+            <Mail size={12} /> kusumwatersolution77@gmail.com
           </a>
         </div>
         <div className="flex items-center gap-3">
@@ -1078,6 +1122,38 @@ export default function App() {
                 </div>
               </section>
 
+              {/* Vessel Water Purifier Section */}
+              <section
+                id="vessel-purifier"
+                className="py-20 px-4"
+                style={{ background: "oklch(0.97 0.006 235)" }}
+              >
+                <div className="max-w-7xl mx-auto">
+                  <div className="text-center mb-12">
+                    <h2
+                      className="text-3xl sm:text-4xl font-bold mb-3"
+                      style={{ color: "oklch(0.14 0.025 250)" }}
+                    >
+                      Vessel Water Purifiers
+                    </h2>
+                    <p className="text-gray-500 max-w-xl mx-auto">
+                      Industrial-grade FRP pressure vessel purifiers built for
+                      commercial and large-scale water treatment.
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {VESSEL_PURIFIERS.map((p, i) => (
+                      <ProductCard
+                        key={p.name}
+                        product={p}
+                        index={i}
+                        onClick={() => handleSelectProduct(p)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </section>
+
               {/* About Us Section */}
               <section
                 id="about"
@@ -1247,36 +1323,36 @@ export default function App() {
                             className="mt-0.5 text-blue-400 shrink-0"
                           />
                           <span>
-                            123, Industrial Area, Sector 5,
+                            Tarkeshwor-10, Manamaiju,
                             <br />
-                            New Delhi – 110001, India
+                            Kathmandu
                           </span>
                         </div>
                         <div className="flex items-center gap-3">
                           <Phone size={16} className="text-blue-400 shrink-0" />
                           <a
-                            href="tel:+919876543210"
+                            href="tel:9843502183"
                             className="hover:text-white transition-colors"
                           >
-                            +91 98765 43210
+                            9843502183
                           </a>
                         </div>
                         <div className="flex items-center gap-3">
                           <Phone size={16} className="text-blue-400 shrink-0" />
                           <a
-                            href="tel:+911145678901"
+                            href="tel:9851174115"
                             className="hover:text-white transition-colors"
                           >
-                            +91 11 4567 8901
+                            9851174115
                           </a>
                         </div>
                         <div className="flex items-center gap-3">
                           <Mail size={16} className="text-blue-400 shrink-0" />
                           <a
-                            href="mailto:info@kusumwatersolution.com"
+                            href="mailto:kusumwatersolution77@gmail.com"
                             className="hover:text-white transition-colors"
                           >
-                            info@kusumwatersolution.com
+                            kusumwatersolution77@gmail.com
                           </a>
                         </div>
                       </div>
